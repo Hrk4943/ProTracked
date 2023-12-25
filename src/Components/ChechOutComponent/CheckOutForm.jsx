@@ -38,6 +38,7 @@ const handlePayment = () => {
             <input
               type="text"
               id="name"
+              required
               className="w-full px-4 py-2 border rounded-lg"
             />
           </div>
@@ -48,6 +49,7 @@ const handlePayment = () => {
             <input
               type="text"
               id="name"
+              required
               className="w-full px-4 py-2 border rounded-lg"
             />
           </div>
@@ -58,6 +60,7 @@ const handlePayment = () => {
             <input
               type="text"
               id="address"
+              required
               className="w-full px-4 py-2 border rounded-lg"
             />
           </div>
@@ -68,6 +71,7 @@ const handlePayment = () => {
             <input
               type="number"
               id="pin number"
+              required
               className="w-full px-4 py-2 border rounded-lg"
             />
           </div>
@@ -83,6 +87,7 @@ const handlePayment = () => {
             <input
               type="text"
               id="name"
+              required
               className="w-full px-4 py-2 border rounded-lg"
             />
           </div>
@@ -93,6 +98,7 @@ const handlePayment = () => {
             <input
               type="number"
               id="cardNumber"
+              required
               className="w-full px-4 py-2 border rounded-lg"
             />
           </div>
@@ -103,6 +109,7 @@ const handlePayment = () => {
             <input
               type="text"
               id="expiration"
+              required
               className="w-full px-4 py-2 border rounded-lg"
             />
           </div>
