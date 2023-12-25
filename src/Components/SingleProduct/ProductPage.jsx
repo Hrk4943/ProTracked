@@ -25,17 +25,25 @@ export default function ProductPage({ products }) {
   const isWishlist = wishlistItems.some((item) => item.id === selectedProduct.id);
 
   const handleAddToCart = () => {
-    addToCart(selectedProduct);
-    toast.success("Added to Cart");
+    if(localStorage.getItem("token")){
+      addToCart(selectedProduct);
+      toast.success("Added to Cart");
+    }else{
+      Navigate("/login");
+    }
   };
 
   const handleWishlist = () => {
-    if (isWishlist) {
-      removeFromWishlist(selectedProduct.id);
-      toast.error("Removed from WishList");
-    } else {
-      addToWishlist(selectedProduct);
-      toast.success("Added to Wishlist");
+    if(localStorage.getItem("token")){
+      if (isWishlist) {
+        removeFromWishlist(selectedProduct.id);
+        toast.error("Removed from WishList");
+      } else {
+        addToWishlist(selectedProduct);
+        toast.success("Added to Wishlist");
+      }
+    }else{
+      Navigate("/login");
     }
   };
   return (
