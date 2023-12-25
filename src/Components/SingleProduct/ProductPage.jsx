@@ -24,6 +24,13 @@ export default function ProductPage({ products }) {
   const review = selectedProduct.reviews;
   const isWishlist = wishlistItems.some((item) => item.id === products.id);
 
+  const handleAddToCart=()=>{
+    addToCart(selectedProduct)
+    toast.success("Added to Cart")
+  }
+
+
+
   const handleWishlist = () => {
     if (isWishlist) {
       removeFromWishlist(selectedProduct.id);
@@ -74,10 +81,11 @@ export default function ProductPage({ products }) {
           <div className="flex justify-center items-center text-center mb-4">
             <button
             className="text-black border-2 px-4 py-2 rounded-lg hover:bg-black hover:text-white"
-              onClick={() => {
-                addToCart(selectedProduct);
-                Navigate('/cart')
-              }}
+              // onClick={() => {
+              //   addToCart(selectedProduct);
+              //   Navigate('/cart')
+              // }}
+              onClick={handleAddToCart}
             >
               Add to Cart
             </button>

@@ -17,7 +17,7 @@ export default function ProductCards({ products }) {
   const handleAddToCart = () => {
     if(localStorage.getItem("token")){
       addToCart(products);
-      toast.success("Added to Wishlist");
+      toast.success("Added to Cart");
     }else{
       Navigate('/login')
     }

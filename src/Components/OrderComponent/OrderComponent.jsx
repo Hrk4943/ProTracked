@@ -13,7 +13,7 @@ export default function OrderComponent() {
 
   return (
     <>
-    <div className="container mx-auto mt-120 mb-10 sm:mb-36 rounded-lg p-4">
+    <div className="container mx-auto mt-12 mb-10 sm:mb-36 rounded-lg p-4">
       <h2 className="text-2xl font-semibold text-center mb-4">Orders</h2>
       {orderItems.length === 0 ? (
         <p className="mt-10 mb-10 text-center">No orders have been placed.</p>
