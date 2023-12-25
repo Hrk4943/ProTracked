@@ -15,20 +15,27 @@ export default function ProductCards({ products }) {
 
 
   const handleAddToCart = () => {
-    addToCart(products);
-    toast.success("Added to Wishlist");
+    if(localStorage.getItem("token")){
+      addToCart(products);
+      toast.success("Added to Wishlist");
+    }else{
+      Navigate('/login')
+    }
   };
 
   const isWishlist = wishlistItems.some((item) => item.id === products.id);
 
   const handleWishlist = () => {
-    if (isWishlist) {
-      removeFromWishlist(products.id);
-      toast.error("Removed from WishList");
-    } else {
-      addToWishlist(products);
-      toast.success("Added to Wishlist");
-
+    if(localStorage.getItem("token")){
+      if (isWishlist) {
+        removeFromWishlist(products.id);
+        toast.error("Removed from WishList");
+      } else {
+        addToWishlist(products);
+        toast.success("Added to Wishlist");
+      }
+    }else{
+      Navigate('/login')
     }
   };
 
