@@ -7,26 +7,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export default function ProductCards({ products }) {
-  const rating =products.rating
+  const rating = products.rating;
   const reviews = products.reviews;
   const { addToCart } = useCart();
   const Navigate = useNavigate();
   const { addToWishlist, removeFromWishlist, wishlistItems } = useWishlist();
 
-
   const handleAddToCart = () => {
-    if(localStorage.getItem("token")){
+    if (localStorage.getItem("token")) {
       addToCart(products);
       toast.success("Added to Cart");
-    }else{
-      Navigate('/login')
+    } else {
+      Navigate("/login");
     }
   };
 
   const isWishlist = wishlistItems.some((item) => item.id === products.id);
 
   const handleWishlist = () => {
-    if(localStorage.getItem("token")){
+    if (localStorage.getItem("token")) {
       if (isWishlist) {
         removeFromWishlist(products.id);
         toast.error("Removed from WishList");
@@ -34,14 +33,14 @@ export default function ProductCards({ products }) {
         addToWishlist(products);
         toast.success("Added to Wishlist");
       }
-    }else{
-      Navigate('/login')
+    } else {
+      Navigate("/login");
     }
   };
 
   return (
     <>
-    <Toaster/>
+      <Toaster />
       <div className="p-4 flex justify-center">
         <div className="mb-7 rounded-lg cursor-pointer overflow-hidden">
           <img
@@ -78,7 +77,7 @@ export default function ProductCards({ products }) {
           <div className="p-4 flex justify-center text-center">
             <button
               className="text-black border-2 px-4 py-2 rounded-lg hover:bg-black hover:text-white"
-                onClick={() =>  handleAddToCart(products)}
+              onClick={() => handleAddToCart(products)}
             >
               Add To Cart
             </button>

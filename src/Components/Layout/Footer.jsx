@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Footer() {
   return (
     <>
-         <footer className="bg-gray-900 mt-10 text-white w-full ">
+      <footer className="bg-gray-900 mt-10 text-white w-full ">
         <div className="container  mx-auto py-10 px-8">
           <div className="flex flex-col md:flex-row md:justify-between">
             <div className="mb-4 md:mb-0 ">
@@ -46,5 +46,5 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  )
+  );
 }

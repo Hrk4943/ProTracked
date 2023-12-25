@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../../Helpers/CartContext";
 
 export default function CartPage() {
-  const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
+  const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =useCart();
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
     0

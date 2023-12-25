@@ -4,7 +4,6 @@ export const WishlistProvider = ({ children }) => {
   const [wishlistItems, setWishlistItems] = useState([]);
 
   const addToWishlist = (product) => {
-    // Check if the product is already in the wishlist
     if (!wishlistItems.find((item) => item.id === product.id)) {
       setWishlistItems((prevWishlist) => [...prevWishlist, product]);
     }

@@ -1,15 +1,14 @@
-import React from 'react'
-import Navbar from '../../Components/Layout/Navbar'
-import CheckOutForm from '../../Components/ChechOutComponent/CheckOutForm'
-import Footer from '../../Components/Layout/Footer'
-import products from '../../Components/DemoProducts/DemoProducts'
+import React from "react";
+import Navbar from "../../Components/Layout/Navbar";
+import CheckOutForm from "../../Components/ChechOutComponent/CheckOutForm";
+import Footer from "../../Components/Layout/Footer";
 
 export default function CheckOut() {
   return (
     <>
-        <Navbar/>
-        <CheckOutForm products={products}/>
-        <Footer/>
+      <Navbar />
+      <CheckOutForm />
+      <Footer />
     </>
-  )
+  );
 }

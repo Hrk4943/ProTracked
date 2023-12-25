@@ -1,7 +1,7 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 
 export default function ImageSlider({ images }) {
-    const [currentImage, setCurrentImage] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
   const handlePrevClick = () => {
     setCurrentImage((currentImage - 1 + images.length) % images.length);
   };
@@ -37,5 +37,5 @@ export default function ImageSlider({ images }) {
         </button>
       </div>
     </>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Banner from "./Banner";
 import ProductCards from "./ProductCards";
 
-export default function MainPage({products}) {
+export default function MainPage({ products }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProducts = products.filter((product) =>

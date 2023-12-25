@@ -127,7 +127,7 @@ export default function Navbar() {
                                 className="block px-4 py-2 hover:bg-gray-100"
                                 onClick={() => {
                                   setIsUserDropdownOpen(false);
-                                  Navigate('/orders')
+                                  Navigate("/orders");
                                 }}
                               >
                                 Orders
@@ -159,69 +159,6 @@ export default function Navbar() {
                   Login
                 </a>
               )}
-
-              {/* <a
-                className="text-white cursor-pointer"
-                onClick={() => {
-                  Navigate("/");
-                }}
-              >
-                <FontAwesomeIcon
-                  icon={faCartShopping}
-                  style={{ color: "#fffff" }}
-                />
-                {cartItemCount > 0 && (
-              <span className="bg-red-500 text-white rounded-full absolute -top-0 -right-0 px-2">
-                {cartItemCount}
-              </span>
-            )}
-              </a>
-              <a
-                className="text-white cursor-pointer"
-                onClick={() => {
-                  Navigate("/");
-                }}
-              >
-                <FontAwesomeIcon icon={faHeart} />
-              </a>
-              <div className="relative">
-                <button
-                  id="dropdownHoverButton"
-                  data-dropdown-toggle="dropdownHover"
-                  onClick={toggleUserDropdown}
-                  className="text-white cursor-pointer"
-                >
-                  <FontAwesomeIcon icon={faUser} />
-                  {isUserDropdownOpen && (
-                    <div className="absolute top-11 right-0 bg-slate-200 divide-y divide-gray-100 rounded-lg shadow w-44">
-                      <ul className="py-2 text-base text-black">
-                        <li>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 hover:bg-gray-100"
-                            onClick={() => {
-                              setIsUserDropdownOpen(false);
-                            }}
-                          >
-                            Orders
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 hover:bg-gray-100"
-                            onClick={() => {
-                              setIsUserDropdownOpen(false);
-                            }}
-                          >
-                            LogOut
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                </button>
-              </div> */}
             </div>
             <div className="md:hidden">
               <button onClick={toggleMobileMenu} className="text-white">

@@ -22,29 +22,25 @@ export default function ProductPage({ products }) {
   }
 
   const review = selectedProduct.reviews;
-  const isWishlist = wishlistItems.some((item) => item.id === products.id);
+  const isWishlist = wishlistItems.some((item) => item.id === selectedProduct.id);
 
-  const handleAddToCart=()=>{
-    addToCart(selectedProduct)
-    toast.success("Added to Cart")
-  }
-
-
+  const handleAddToCart = () => {
+    addToCart(selectedProduct);
+    toast.success("Added to Cart");
+  };
 
   const handleWishlist = () => {
     if (isWishlist) {
       removeFromWishlist(selectedProduct.id);
       toast.error("Removed from WishList");
-
     } else {
       addToWishlist(selectedProduct);
       toast.success("Added to Wishlist");
-
     }
   };
   return (
     <>
-    <Toaster/>
+      <Toaster />
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center px-5 py-24">
         <div className="mb-10 md:mb-0 flex justify-center">
           <ImageSlider
@@ -80,11 +76,7 @@ export default function ProductPage({ products }) {
           </div>
           <div className="flex justify-center items-center text-center mb-4">
             <button
-            className="text-black border-2 px-4 py-2 rounded-lg hover:bg-black hover:text-white"
-              // onClick={() => {
-              //   addToCart(selectedProduct);
-              //   Navigate('/cart')
-              // }}
+              className="text-black border-2 px-4 py-2 rounded-lg hover:bg-black hover:text-white"
               onClick={handleAddToCart}
             >
               Add to Cart
