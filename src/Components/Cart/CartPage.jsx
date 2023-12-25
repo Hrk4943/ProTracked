@@ -28,6 +28,9 @@ export default function CartPage() {
               <li
                 key={item.id}
                 className="flex flex-col sm:flex-row justify-between border-4 items-center sm:mx-60 px-2 sm:px-10 py-2 sm:py-10 mb-5"
+                onClick={() => {
+                  Navigate(`/productDetails/${item.id}`);
+                }}
               >
                 <div className="flex items-center mb-2 sm:mb-0">
                   <img
